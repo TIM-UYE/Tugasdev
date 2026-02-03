@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DevOps Landing Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevOps Tim Uye</title>
 
   <style>
     * {
@@ -51,7 +51,7 @@
 
     .hero p {
       max-width: 700px;
-      margin: 10px auto;
+      margin: auto;
       line-height: 1.6;
     }
 
@@ -62,6 +62,8 @@
       border: none;
       font-weight: bold;
       cursor: pointer;
+      background: linear-gradient(135deg, #c77dff, #9d4edd);
+      color: #fff;
     }
 
     /* SECTION */
@@ -98,96 +100,303 @@
       padding: 30px;
       border-radius: 15px;
       text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     }
 
-    /* FOOTER */
+    /* CONTACT PRO */
+    .contact-pro {
+      background: radial-gradient(circle at bottom left, #2b1d71, #1a0f3c);
+      padding: 90px 20px;
+    }
+
+    .contact-pro-container {
+      max-width: 1200px;
+      margin: auto;
+      background: linear-gradient(135deg, #24104f, #160b33);
+      border-radius: 28px;
+      padding: 60px;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 50px;
+      box-shadow: 0 40px 90px rgba(0,0,0,0.55);
+    }
+
+    .contact-pro-left h2 {
+      font-size: 2.6rem;
+      margin-bottom: 25px;
+    }
+
+    .contact-pro-left ul {
+      list-style: none;
+      margin-bottom: 30px;
+    }
+
+    .contact-pro-left li {
+      margin-bottom: 14px;
+      font-size: 0.95rem;
+    }
+
+    .contact-pro-left li::before {
+      content: "✔";
+      color: #c77dff;
+      margin-right: 10px;
+    }
+
+    .contact-pro-email {
+      margin-top: 15px;
+      opacity: 0.85;
+    }
+
+    .contact-map {
+      margin-top: 35px;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.25);
+    }
+
+    .contact-map iframe {
+      width: 100%;
+      height: 230px;
+      border: none;
+      filter: grayscale(100%);
+    }
+
+    /* FORM */
+    label {
+      font-size: 0.85rem;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .tag-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .tag {
+      padding: 8px 18px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.2);
+      cursor: pointer;
+      font-size: 0.85rem;
+      transition: 0.3s;
+    }
+
+    .tag.active {
+      background: linear-gradient(135deg, #c77dff, #9d4edd);
+      border-color: transparent;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 13px;
+      margin-bottom: 18px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.25);
+      background: rgba(255,255,255,0.08);
+      color: #fff;
+    }
+
+    textarea {
+      min-height: 110px;
+    }
+
+    .file-upload {
+      border: 2px dashed rgba(255,255,255,0.3);
+      padding: 22px;
+      border-radius: 14px;
+      text-align: center;
+      font-size: 0.85rem;
+      cursor: pointer;
+      margin-bottom: 25px;
+    }
+
+    .file-upload.dragover {
+      background: rgba(199,125,255,0.15);
+      border-color: #c77dff;
+    }
+
+    button[type="submit"] {
+      width: 100%;
+      padding: 15px;
+      border-radius: 35px;
+      border: none;
+      font-weight: bold;
+      background: linear-gradient(135deg, #c77dff, #9d4edd);
+      color: #fff;
+      cursor: pointer;
+    }
+
     footer {
       text-align: center;
       padding: 30px;
       font-size: 0.9rem;
       opacity: 0.8;
     }
+
+    @media (max-width: 900px) {
+      .contact-pro-container {
+        grid-template-columns: 1fr;
+        padding: 40px;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <h1>DevOps</h1>
-    <nav>
-      <a href="#section1">Home</a>
-      <a href="#section2">Services</a>
-      <a href="#section3">Process</a>
-      <a href="#section4">Portfolio</a>
-      <a href="#section5">Contact</a>
-      <a href="#section5">Here</a>
-    </nav>
-  </header>
+<header>
+  <h1>DevOps Tim Uye</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Layanan</a>
+    <a href="#process">Proses</a>
+    <a href="#portfolio">Portofolio</a>
+    <a href="#contact">Kontak</a>
+  </nav>
+</header>
 
-  <!-- SECTION 1 : HERO -->
-  <section id="section1" class="hero">
-    <h2>Landing Page Tim Uye</h2>
-    <p>
-      Dibawah adalah hasil dari praktikum DevOps kami.
-    </p>
-    <button>Go! Go!</button>
-  </section>
+<section id="home" class="hero">
+  <h2>Landing Page Praktikum DevOps</h2>
+  <p>Website ini merupakan hasil implementasi praktikum DevOps oleh Tim Uye.</p>
+  <button>Mulai</button>
+</section>
 
-  <!-- SECTION 2 -->
-  <section id="section2" class="section-light">
-    <h3>Our Services</h3>
-    <div class="grid">
-      <div class="card">Service 1</div>
-      <div class="card">Service 2</div>
-      <div class="card">Service 3</div>
+<section id="services" class="section-light">
+  <h3>Jenis Layanan</h3>
+  <div class="grid">
+    <div class="card">CI/CD Pipeline</div>
+    <div class="card">Cloud Deployment</div>
+    <div class="card">Monitoring & Logging</div>
+  </div>
+</section>
+
+<section id="process" class="section-dark">
+  <h3>Alur Pengerjaan</h3>
+  <div class="grid">
+    <div class="card">Perencanaan</div>
+    <div class="card">Implementasi</div>
+    <div class="card">Evaluasi</div>
+  </div>
+</section>
+
+<section id="portfolio" class="section-light">
+  <h3>Portofolio Tim</h3>
+  <div class="grid">
+    <div class="card">Project DevOps A</div>
+    <div class="card">Project DevOps B</div>
+    <div class="card">Project DevOps C</div>
+  </div>
+</section>
+
+<section id="contact" class="contact-pro">
+  <div class="contact-pro-container">
+
+    <div class="contact-pro-left">
+      <h2>Diskusi Proyek DevOps</h2>
+      <ul>
+        <li>Bagian dari tugas praktikum DevOps</li>
+        <li>Dikerjakan secara kolaboratif oleh Tim Uye</li>
+        <li>Berbasis studi kasus</li>
+      </ul>
+
+      <div class="contact-pro-email">📧 timuye@gmail.com</div>
+
+      <div class="contact-map">
+        <iframe 
+          src="https://www.google.com/maps?q=Politeknik%20Negeri%20Jember&output=embed"
+          loading="lazy">
+        </iframe>
+      </div>
     </div>
-  </section>
 
-  <!-- SECTION 3 -->
-  <section id="section3" class="section-dark">
-    <h3>How It Works</h3>
-    <div class="grid">
-      <div class="card">Step 1</div>
-      <div class="card">Step 2</div>
-      <div class="card">Step 3</div>
+    <div>
+      <form>
+
+        <label>Jenis Layanan</label>
+        <div class="tag-group selectable" data-target="layanan">
+          <div class="tag">CI/CD</div>
+          <div class="tag">Deployment</div>
+          <div class="tag">Monitoring</div>
+        </div>
+        <input type="hidden" id="layanan">
+
+        <label>Skala Proyek</label>
+        <div class="tag-group selectable" data-target="skala">
+          <div class="tag">Kecil</div>
+          <div class="tag">Menengah</div>
+          <div class="tag">Besar</div>
+        </div>
+        <input type="hidden" id="skala">
+
+        <label>Nama</label>
+        <input type="text" required>
+
+        <label>Email</label>
+        <input type="email" required>
+
+        <label>Deskripsi Proyek</label>
+        <textarea required></textarea>
+
+        <label>Lampiran File</label>
+        <div class="file-upload" id="fileUpload">
+          <span id="fileText">Klik atau seret file ke sini</span>
+          <input type="file" id="fileInput" hidden>
+        </div>
+
+        <button type="submit">Kirim</button>
+      </form>
     </div>
-  </section>
 
-  <!-- SECTION 4 -->
-  <section id="section4" class="section-light">
-    <h3>Portfolio</h3>
-    <div class="grid">
-      <div class="card">Project A</div>
-      <div class="card">Project B</div>
-      <div class="card">Project C</div>
-    </div>
-  </section>
+  </div>
+</section>
 
-  <!-- SECTION 5 -->
-  <section id="section5" class="section-dark">
-    <h3>Contact Us</h3>
-    <div class="grid">
-      <div class="card">Email</div>
-      <div class="card">Phone</div>
-      <div class="card">Address</div>
-    </div>
-  </section>
+<!-- SECTION 6 -->
+    <section id="section5" class="section-dark">
+      <h3>Here We Go</h3>
+      <div class="grid">
+        <div class="card">Plan A</div>
+        <div class="card">Plan B</div>
+        <div class="card">Plan C</div>
+      </div>
+    </section>
 
-  <!-- SECTION 6 -->
-  <section id="section5" class="section-dark">
-    <h3>Here We Go</h3>
-    <div class="grid">
-      <div class="card">Plan A</div>
-      <div class="card">Plan B</div>
-      <div class="card">Plan C</div>
-    </div>
-  </section>
+<footer>© 2026 Tim Uye — Praktikum DevOps</footer>
 
-  <!-- FOOTER -->
-  <footer>
-    © 2026 DevOps Landing Page. All rights reserved.
-  </footer>
+<script>
+  document.querySelectorAll('.selectable').forEach(group => {
+    const target = document.getElementById(group.dataset.target);
+    group.querySelectorAll('.tag').forEach(tag => {
+      tag.onclick = () => {
+        group.querySelectorAll('.tag').forEach(t => t.classList.remove('active'));
+        tag.classList.add('active');
+        target.value = tag.innerText;
+      };
+    });
+  });
+
+  const upload = document.getElementById('fileUpload');
+  const input = document.getElementById('fileInput');
+  const text = document.getElementById('fileText');
+
+  upload.onclick = () => input.click();
+  input.onchange = () => text.innerText = input.files[0]?.name || 'Klik atau seret file ke sini';
+
+  upload.ondragover = e => {
+    e.preventDefault();
+    upload.classList.add('dragover');
+  };
+  upload.ondragleave = () => upload.classList.remove('dragover');
+  upload.ondrop = e => {
+    e.preventDefault();
+    upload.classList.remove('dragover');
+    input.files = e.dataTransfer.files;
+    text.innerText = e.dataTransfer.files[0].name;
+  };
+</script>
 
 </body>
 </html>
