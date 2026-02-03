@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DevOps Landing Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1d2671, #c33764);
+      color: #fff;
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .hero button {
+      padding: 15px 30px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 30px;
+      background: #fff;
+      color: #c33764;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .hero button:hover {
+      background: #f1f1f1;
+      transform: scale(1.05);
+    }
+
+    .features {
+      background: #fff;
+      color: #333;
+      padding: 60px 20px;
+    }
+
+    .features h3 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+    }
+
+    .feature-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .feature {
+      background: #f4f4f4;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    .feature h4 {
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>DevOps Project</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Features</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Landing Page DevOps</h2>
+    <p>
+      Ini adalah landing page sederhana untuk tugas DevOps. 
+      Mudah di-deploy, ringan, dan siap digunakan untuk CI/CD,
+      Docker, atau cloud deployment.
+    </p>
+    <button>Get Started</button>
+  </section>
+
+  <section class="features">
+    <h3>Fitur Utama</h3>
+    <div class="feature-list">
+      <div class="feature">
+        <h4>Simple</h4>
+        <p>Struktur HTML sederhana dan mudah dipahami.</p>
+      </div>
+      <div class="feature">
+        <h4>Responsive</h4>
+        <p>Tampilan optimal di desktop maupun mobile.</p>
+      </div>
+      <div class="feature">
+        <h4>DevOps Ready</h4>
+        <p>Cocok untuk deploy via CI/CD, Docker, dan cloud.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 DevOps Landing Page | Tugas DevOps
+  </footer>
+
+</body>
+</html>
