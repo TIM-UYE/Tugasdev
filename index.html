@@ -29,6 +29,11 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: sticky;
+      top: 0;
+      background: rgba(0,0,0,0.3);
+      backdrop-filter: blur(10px);
+      z-index: 100;
     }
 
     nav a {
@@ -38,10 +43,14 @@
       font-weight: bold;
     }
 
+    nav a:hover {
+      text-decoration: underline;
+    }
+
     /* HERO */
     .hero {
       text-align: center;
-      padding: 100px 20px;
+      padding: 120px 20px;
     }
 
     .hero h2 {
@@ -66,7 +75,7 @@
 
     /* SECTION */
     section {
-      padding: 70px 20px;
+      padding: 80px 20px;
     }
 
     .section-light {
@@ -116,46 +125,75 @@
   <header>
     <h1>DevOps</h1>
     <nav>
-      <a href="#section1">Home</a>
-      <a href="#section2">Services</a>
-      <a href="#section3">Process</a>
-      <a href="#section4">Portfolio</a>
-      <a href="#section5">Contact</a>
-      <a href="#section5">Here</a>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#works">Process</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+      <a href="#plans">Here</a>
     </nav>
   </header>
 
-  <!-- SECTION 1 : HERO -->
-  <section id="section1" class="hero">
+  <!-- HOME / HERO -->
+  <section id="home" class="hero">
     <h2>Landing Page Tim Uye</h2>
     <p>
       Dibawah adalah hasil dari praktikum DevOps kami.
     </p>
-    <button>Go! Go!</button>
+    <button onclick="location.href='#services'">Go! Go!</button>
   </section>
 
-  <!-- SECTION 2 -->
-  <section id="section2" class="section-light">
+  <!-- SERVICES -->
+  <section id="services" class="section-light">
     <h3>Our Services</h3>
     <div class="grid">
-      <div class="card">Service 1</div>
-      <div class="card">Service 2</div>
-      <div class="card">Service 3</div>
+      <div class="card">
+        <h4>CI / CD Pipeline</h4>
+        <p>
+          Otomatisasi build, testing, dan deployment dengan GitHub Actions,
+          GitLab CI, atau Jenkins.
+        </p>
+      </div>
+
+      <div class="card">
+        <h4>Cloud Deployment</h4>
+        <p>
+          Deployment ke cloud (AWS, GCP, VPS) yang aman dan scalable.
+        </p>
+      </div>
+
+      <div class="card">
+        <h4>Monitoring</h4>
+        <p>
+          Monitoring server dan aplikasi secara real-time.
+        </p>
+      </div>
     </div>
   </section>
 
-  <!-- SECTION 3 -->
-  <section id="section3" class="section-dark">
-    <h3>How It Works</h3>
+  <!-- PROCESS / WORKS -->
+  <section id="works" class="section-light">
+    <h3>Our Process</h3>
     <div class="grid">
-      <div class="card">Step 1</div>
-      <div class="card">Step 2</div>
-      <div class="card">Step 3</div>
+      <div class="card">
+        <h4>CI/CD Automation</h4>
+        <p>Pipeline otomatis untuk deployment production.</p>
+      </div>
+
+      <div class="card">
+        <h4>Infrastructure as Code</h4>
+        <p>Terraform untuk manajemen infrastruktur cloud.</p>
+      </div>
+
+      <div class="card">
+        <h4>Containerization</h4>
+        <p>Docker & Kubernetes untuk skalabilitas.</p>
+      </div>
     </div>
   </section>
 
-  <!-- SECTION 4 -->
-  <section id="section4" class="section-light">
+  <!-- PORTFOLIO -->
+  <section id="portfolio" class="section-light">
     <h3>Portfolio</h3>
     <div class="grid">
       <div class="card">Project A</div>
@@ -164,8 +202,8 @@
     </div>
   </section>
 
-  <!-- SECTION 5 -->
-  <section id="section5" class="section-dark">
+  <!-- CONTACT -->
+  <section id="contact" class="section-dark">
     <h3>Contact Us</h3>
     <div class="grid">
       <div class="card">Email</div>
@@ -174,8 +212,8 @@
     </div>
   </section>
 
-  <!-- SECTION 6 -->
-  <section id="section5" class="section-dark">
+  <!-- HERE -->
+  <section id="plans" class="section-dark">
     <h3>Here We Go</h3>
     <div class="grid">
       <div class="card">Plan A</div>
