@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DevOps Landing Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevOps Tim Uye</title>
 
   <style>
     * {
@@ -60,7 +60,7 @@
 
     .hero p {
       max-width: 700px;
-      margin: 10px auto;
+      margin: auto;
       line-height: 1.6;
     }
 
@@ -71,6 +71,8 @@
       border: none;
       font-weight: bold;
       cursor: pointer;
+      background: linear-gradient(135deg, #c77dff, #9d4edd);
+      color: #fff;
     }
 
     /* SECTION */
@@ -107,35 +109,167 @@
       padding: 30px;
       border-radius: 15px;
       text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     }
 
-    /* FOOTER */
+    /* CONTACT PRO */
+    .contact-pro {
+      background: radial-gradient(circle at bottom left, #2b1d71, #1a0f3c);
+      padding: 90px 20px;
+    }
+
+    .contact-pro-container {
+      max-width: 1200px;
+      margin: auto;
+      background: linear-gradient(135deg, #24104f, #160b33);
+      border-radius: 28px;
+      padding: 60px;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 50px;
+      box-shadow: 0 40px 90px rgba(0,0,0,0.55);
+    }
+
+    .contact-pro-left h2 {
+      font-size: 2.6rem;
+      margin-bottom: 25px;
+    }
+
+    .contact-pro-left ul {
+      list-style: none;
+      margin-bottom: 30px;
+    }
+
+    .contact-pro-left li {
+      margin-bottom: 14px;
+      font-size: 0.95rem;
+    }
+
+    .contact-pro-left li::before {
+      content: "✔";
+      color: #c77dff;
+      margin-right: 10px;
+    }
+
+    .contact-pro-email {
+      margin-top: 15px;
+      opacity: 0.85;
+    }
+
+    .contact-map {
+      margin-top: 35px;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.25);
+    }
+
+    .contact-map iframe {
+      width: 100%;
+      height: 230px;
+      border: none;
+      filter: grayscale(100%);
+    }
+
+    /* FORM */
+    label {
+      font-size: 0.85rem;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .tag-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .tag {
+      padding: 8px 18px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.2);
+      cursor: pointer;
+      font-size: 0.85rem;
+      transition: 0.3s;
+    }
+
+    .tag.active {
+      background: linear-gradient(135deg, #c77dff, #9d4edd);
+      border-color: transparent;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 13px;
+      margin-bottom: 18px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.25);
+      background: rgba(255,255,255,0.08);
+      color: #fff;
+    }
+
+    textarea {
+      min-height: 110px;
+    }
+
+    .file-upload {
+      border: 2px dashed rgba(255,255,255,0.3);
+      padding: 22px;
+      border-radius: 14px;
+      text-align: center;
+      font-size: 0.85rem;
+      cursor: pointer;
+      margin-bottom: 25px;
+    }
+
+    .file-upload.dragover {
+      background: rgba(199,125,255,0.15);
+      border-color: #c77dff;
+    }
+
+    button[type="submit"] {
+      width: 100%;
+      padding: 15px;
+      border-radius: 35px;
+      border: none;
+      font-weight: bold;
+      background: linear-gradient(135deg, #c77dff, #9d4edd);
+      color: #fff;
+      cursor: pointer;
+    }
+
     footer {
       text-align: center;
       padding: 30px;
       font-size: 0.9rem;
       opacity: 0.8;
     }
+
+    @media (max-width: 900px) {
+      .contact-pro-container {
+        grid-template-columns: 1fr;
+        padding: 40px;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <h1>DevOps</h1>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#works">Process</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#contact">Contact</a>
-      <a href="#plans">Here</a>
-    </nav>
-  </header>
+<header>
+  <h1>DevOps Tim Uye</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Layanan</a>
+    <a href="#process">Proses</a>
+    <a href="#portfolio">Portofolio</a>
+    <a href="#contact">Kontak</a>
+  </nav>
+</header>
 
-  <!-- HOME / HERO -->
-  <section id="home" class="hero">
+  <!-- SECTION HERO -->
+  <section id="section1" class="hero">
     <h2>Landing Page Tim Uye</h2>
     <p>
       Dibawah adalah hasil dari praktikum DevOps kami.
@@ -143,89 +277,260 @@
     <button onclick="location.href='#services'">Go! Go!</button>
   </section>
 
-  <!-- SERVICES -->
-  <section id="services" class="section-light">
-    <h3>Our Services</h3>
-    <div class="grid">
-      <div class="card">
-        <h4>CI / CD Pipeline</h4>
-        <p>
-          Otomatisasi build, testing, dan deployment dengan GitHub Actions,
-          GitLab CI, atau Jenkins.
-        </p>
-      </div>
-
-      <div class="card">
-        <h4>Cloud Deployment</h4>
-        <p>
-          Deployment ke cloud (AWS, GCP, VPS) yang aman dan scalable.
-        </p>
-      </div>
-
-      <div class="card">
-        <h4>Monitoring</h4>
-        <p>
-          Monitoring server dan aplikasi secara real-time.
-        </p>
-      </div>
+  <!-- SECTION Dema -->
+  <section id="section2" class="section-light">
+  <h3>Our Services</h3>
+  <div class="grid">
+    <div class="card">
+      <h4>CI / CD Pipeline</h4>
+      <p>
+        Otomatisasi proses build, testing, dan deployment menggunakan
+        GitHub Actions, GitLab CI, atau Jenkins agar aplikasi selalu
+        up-to-date dan stabil.
+      </p>
     </div>
+
+    <div class="card">
+      <h4>Cloud Deployment</h4>
+      <p>
+        Deployment aplikasi ke cloud server (AWS, GCP, VPS) dengan
+        konfigurasi yang aman, scalable, dan mudah dikelola.
+      </p>
+    </div>
+
+    <div class="card">
+      <h4>Monitoring & Maintenance</h4>
+      <p>
+        Monitoring performa server dan aplikasi secara real-time
+        untuk memastikan sistem berjalan optimal dan minim downtime.
+      </p>
+    </div>
+  </div>
   </section>
 
-  <!-- PROCESS / WORKS -->
-  <section id="works" class="section-light">
-    <h3>Our Process</h3>
-    <div class="grid">
-      <div class="card">
-        <h4>CI/CD Automation</h4>
-        <p>Pipeline otomatis untuk deployment production.</p>
+  <!-- SECTION Yusron -->
+  <section id="section4" class="section-light">
+  <h3>Our Works</h3>
+
+  <div class="grid">
+    <div class="card">
+      <h4>CI/CD Pipeline Automation</h4>
+      <p>
+        Membangun pipeline CI/CD menggunakan GitHub Actions & GitLab CI
+        untuk deployment otomatis ke server production.
+      </p>
+    </div>
+
+    <div class="card">
+      <h4>Cloud Infrastructure Setup</h4>
+      <p>
+        Desain dan implementasi infrastruktur cloud (AWS / GCP)
+        menggunakan Terraform dengan pendekatan Infrastructure as Code.
+      </p>
+    </div>
+
+    <div class="card">
+      <h4>Docker & Kubernetes Deployment</h4>
+      <p>
+        Containerisasi aplikasi dengan Docker dan orkestrasi
+        menggunakan Kubernetes untuk skalabilitas tinggi.
+      </p>
+    </div>
+
+    <div class="card">
+      <h4>Monitoring & Logging System</h4>
+      <p>
+        Implementasi monitoring menggunakan Prometheus, Grafana,
+        serta centralized logging untuk observability sistem.
+      </p>
+    </div>
+
+    <div class="card">
+      <h4>Server Hardening & Security</h4>
+      <p>
+        Konfigurasi keamanan server Linux, SSH hardening,
+        firewall, dan best practice security DevOps.
+      </p>
+    </div>
+
+    <div class="card">
+      <h4>High Availability Architecture</h4>
+      <p>
+        Membangun sistem high availability dengan load balancer,
+        auto-scaling, dan failover strategy.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- SECTION Dymas -->
+  <section id="section4" class="section-light">
+  <h3>Portfolio</h3>
+  <div class="grid">
+
+    <div class="card">
+      <img src="https://picsum.photos/400/300?random=1" alt="Project A">
+      <div class="card-content">
+        <h4>Project A</h4>
+        <p>Website landing page modern dengan desain clean dan responsive.</p>
+        <a href="#">Lihat Project</a>
       </div>
+    </div>
 
-      <div class="card">
-        <h4>Infrastructure as Code</h4>
-        <p>Terraform untuk manajemen infrastruktur cloud.</p>
+    <div class="card">
+      <img src="https://picsum.photos/400/300?random=2" alt="Project B">
+      <div class="card-content">
+        <h4>Project B</h4>
+        <p>Aplikasi web dashboard dengan fitur interaktif dan realtime.</p>
+        <a href="#">Lihat Project</a>
       </div>
+    </div>
 
-      <div class="card">
-        <h4>Containerization</h4>
-        <p>Docker & Kubernetes untuk skalabilitas.</p>
+    <div class="card">
+      <img src="https://picsum.photos/400/300?random=3" alt="Project C">
+      <div class="card-content">
+        <h4>Project C</h4>
+        <p>Personal portfolio dengan animasi halus dan UI kekinian.</p>
+        <a href="#">Lihat Project</a>
       </div>
     </div>
-  </section>
 
-  <!-- PORTFOLIO -->
-  <section id="portfolio" class="section-light">
-    <h3>Portfolio</h3>
-    <div class="grid">
-      <div class="card">Project A</div>
-      <div class="card">Project B</div>
-      <div class="card">Project C</div>
+  </div>
+</section>
+
+<!-- SECTION Muqid -->
+<section id="section5" class="section-dark">
+  <h3>Here We Go</h3>
+  <div class="grid">
+
+    <div class="card">
+      <img src="https://picsum.photos/400/300?random=4" alt="Plan A">
+      <div class="card-content">
+        <h4>Plan A</h4>
+        <p>Strategi awal untuk membangun fondasi project dengan kuat dan rapi.</p>
+        <a href="#">Mulai</a>
+      </div>
     </div>
-  </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="section-dark">
-    <h3>Contact Us</h3>
-    <div class="grid">
-      <div class="card">Email</div>
-      <div class="card">Phone</div>
-      <div class="card">Address</div>
+    <div class="card">
+      <img src="https://picsum.photos/400/300?random=5" alt="Plan B">
+      <div class="card-content">
+        <h4>Plan B</h4>
+        <p>Pengembangan lanjutan dengan fitur tambahan dan optimasi performa.</p>
+        <a href="#">Detail</a>
+      </div>
     </div>
-  </section>
 
-  <!-- HERE -->
-  <section id="plans" class="section-dark">
-    <h3>Here We Go</h3>
-    <div class="grid">
-      <div class="card">Plan A</div>
-      <div class="card">Plan B</div>
-      <div class="card">Plan C</div>
+    <div class="card">
+      <img src="https://picsum.photos/400/300?random=6" alt="Plan C">
+      <div class="card-content">
+        <h4>Plan C</h4>
+        <p>Finalisasi, deployment, dan maintenance jangka panjang.</p>
+        <a href="#">Eksekusi</a>
+      </div>
     </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer>
-    © 2026 DevOps Landing Page. All rights reserved.
-  </footer>
+  </div>
+</section>
+
+
+<!-- SECTION Nandita -->
+<section id="contact" class="contact-pro">
+  <div class="contact-pro-container">
+
+    <div class="contact-pro-left">
+      <h2>Diskusi Proyek DevOps</h2>
+      <ul>
+        <li>Bagian dari tugas praktikum DevOps</li>
+        <li>Dikerjakan secara kolaboratif oleh Tim Uye</li>
+        <li>Berbasis studi kasus</li>
+      </ul>
+
+      <div class="contact-pro-email">📧 timuye@gmail.com</div>
+
+      <div class="contact-map">
+        <iframe 
+          src="https://www.google.com/maps?q=Politeknik%20Negeri%20Jember&output=embed"
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+
+    <div>
+      <form>
+
+        <label>Jenis Layanan</label>
+        <div class="tag-group selectable" data-target="layanan">
+          <div class="tag">CI/CD</div>
+          <div class="tag">Deployment</div>
+          <div class="tag">Monitoring</div>
+        </div>
+        <input type="hidden" id="layanan">
+
+        <label>Skala Proyek</label>
+        <div class="tag-group selectable" data-target="skala">
+          <div class="tag">Kecil</div>
+          <div class="tag">Menengah</div>
+          <div class="tag">Besar</div>
+        </div>
+        <input type="hidden" id="skala">
+
+        <label>Nama</label>
+        <input type="text" required>
+
+        <label>Email</label>
+        <input type="email" required>
+
+        <label>Deskripsi Proyek</label>
+        <textarea required></textarea>
+
+        <label>Lampiran File</label>
+        <div class="file-upload" id="fileUpload">
+          <span id="fileText">Klik atau seret file ke sini</span>
+          <input type="file" id="fileInput" hidden>
+        </div>
+
+        <button type="submit">Kirim</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<footer>© 2026 Tim Uye — Praktikum DevOps</footer>
+
+<script>
+  document.querySelectorAll('.selectable').forEach(group => {
+    const target = document.getElementById(group.dataset.target);
+    group.querySelectorAll('.tag').forEach(tag => {
+      tag.onclick = () => {
+        group.querySelectorAll('.tag').forEach(t => t.classList.remove('active'));
+        tag.classList.add('active');
+        target.value = tag.innerText;
+      };
+    });
+  });
+
+  const upload = document.getElementById('fileUpload');
+  const input = document.getElementById('fileInput');
+  const text = document.getElementById('fileText');
+
+  upload.onclick = () => input.click();
+  input.onchange = () => text.innerText = input.files[0]?.name || 'Klik atau seret file ke sini';
+
+  upload.ondragover = e => {
+    e.preventDefault();
+    upload.classList.add('dragover');
+  };
+  upload.ondragleave = () => upload.classList.remove('dragover');
+  upload.ondrop = e => {
+    e.preventDefault();
+    upload.classList.remove('dragover');
+    input.files = e.dataTransfer.files;
+    text.innerText = e.dataTransfer.files[0].name;
+  };
+</script>
 
 </body>
 </html>
